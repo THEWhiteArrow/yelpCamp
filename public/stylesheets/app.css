@@ -49,6 +49,23 @@ svg{
    animation-direction: reverse;
 }
 
+#info .list-group-item{
+   padding:0;
+}
+
+.info-title{
+   font-weight: 700;
+   font-size: 1.1rem;
+   /* color:#343a40; */
+   color:rgba(255, 255, 255, 0.76);
+   text-align: center;
+   background-color:#343a40;
+
+}
+
+.info-data{
+   height:45px;
+}
 
 
 @keyframes spin{
