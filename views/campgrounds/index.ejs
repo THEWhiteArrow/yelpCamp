@@ -14,14 +14,13 @@
 <div class="row grid-container">
 <% for (let campground of campgrounds){%>
    <div class="card mb-3">
-   <!-- <div class="card mb-3 d-flex flex-column flex-lg-row col-12 col-lg-4 "> -->
       <div class="row">
          <div class="col-md-12 ">
             <% if(campground.images.length){ %>
-               <img class="img-fluid mt-2 pt-1" alt="" src="<%=campground.images[0].url%>">
+               <img class="img-fluid mt-2 pt-1" alt="Campground Image" src="<%=campground.images[0].url%>">
                <% }else{ %>
-                  <img class="img-fluid" alt=""
-                     src="https://res.cloudinary.com/dcj6ujzqj/image/upload/v1610824866/YelpCamp/vprkkftxtsdsse9tnqyt.jpg ">
+                  <img class="img-fluid mt-2 pt-1" alt="No Campground Image Uploaded"
+                     src="https://res.cloudinary.com/dcj6ujzqj/image/upload/e_saturation:-100/v1611163785/YelpCamp/app_files/kilarov-zaneit-Hxs6EAdI2Q8-unsplash_h4n7hs.jpg">
                   <% } %>
          </div>
          <div class="col-md-12">

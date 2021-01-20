@@ -35,18 +35,15 @@ const seedDB = async () => {
                cities[random1000].latitude
             ]
          },
+         date:'2021-1-20',
          images: [
             {
-               url: 'https://res.cloudinary.com/dcj6ujzqj/image/upload/v1610826118/YelpCamp/gvpzci51xvsfogtdrhdv.jpg',
-               filename: 'YelpCamp/gvpzci51xvsfogtdrhdv'
+               url: 'https://res.cloudinary.com/dcj6ujzqj/image/upload/v1611164755/YelpCamp/app_files/daan-weijers-pSaEMIiUO84-unsplash_n3d2tz.jpg',
+               filename: 'YelpCamp/daan-weijers-pSaEMIiUO84-unsplash_n3d2tz'
             },
             {
-               url: 'https://res.cloudinary.com/dcj6ujzqj/image/upload/v1610826118/YelpCamp/ki3a1thc2qwb3kcakp59.jpg',
-               filename: 'YelpCamp/ki3a1thc2qwb3kcakp59'
-            },
-            {
-               url: 'https://res.cloudinary.com/dcj6ujzqj/image/upload/v1610826118/YelpCamp/ljc8xrqy9prcejk4steg.jpg',
-               filename: 'YelpCamp/ljc8xrqy9prcejk4steg'
+               url: 'https://res.cloudinary.com/dcj6ujzqj/image/upload/v1611163785/YelpCamp/app_files/kilarov-zaneit-Hxs6EAdI2Q8-unsplash_h4n7hs.jpg',
+               filename: 'YelpCamp/kilarov-zaneit-Hxs6EAdI2Q8-unsplash_h4n7hs'
             }
          ],
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores vero perferendis laudantium, consequuntur voluptatibus nulla architecto, sit soluta esse iure sed labore ipsam a cum nihil atque molestiae deserunt!',

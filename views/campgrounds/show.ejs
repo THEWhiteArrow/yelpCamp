@@ -13,7 +13,7 @@
                   </li>
                   <li class="list-group-item">
                      <div class="info-title">Contact:</div>
-                     <div class="info-data d-flex align-items-center justify-content-center ">(+48) 643 834 722</div>
+                     <div class="info-data d-flex align-items-center justify-content-center "><%= campground.author.spacedPhoneNumber%></div>
                   </li>
                   <li class="list-group-item">
                      <div class="info-title">Email:</div>
@@ -70,9 +70,7 @@
                   </form>
                </div>
                <% } %>
-                  <div class="card-footer text-muted">
-                     2 days ago
-                  </div>
+                  <div class="card-footer text-muted"><%= campground.date %> </div>
          </div>
 
       </div>

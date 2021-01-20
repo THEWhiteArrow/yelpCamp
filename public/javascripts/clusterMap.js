@@ -133,11 +133,13 @@ map.on('load', function () {
 });
 
 map.on('sourcedata', function (e) {
-   if (e.isSourceLoaded) {
+   let checkLoading = true;
+   if (e.isSourceLoaded && checkLoading) {
+      checkLoading = false;
       // Do something when the source has finished loading
-
       const loadDiv = document.querySelector('#load');
       loadDiv.style.opacity = '0';
+
       // This prevents the page from scrolling down to where it was previously.
       if ('scrollRestoration' in history) {
          history.scrollRestoration = 'manual';
