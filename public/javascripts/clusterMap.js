@@ -63,7 +63,7 @@ map.on('load', function () {
       layout: {
          'text-field': '{point_count_abbreviated}',
          'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-         'text-size': 12,
+         'text-size': 14,
       },
       paint: {
          "text-color": "#ffffff"
@@ -78,7 +78,7 @@ map.on('load', function () {
       paint: {
          'circle-color': '#11b4da',
          'circle-radius': 6,
-         'circle-stroke-width': 2,
+         'circle-stroke-width': 1,
          'circle-stroke-color': '#fff'
       }
    });
@@ -130,4 +130,24 @@ map.on('load', function () {
    map.on('mouseleave', 'clusters', function () {
       map.getCanvas().style.cursor = '';
    });
+});
+
+map.on('sourcedata', function (e) {
+   if (e.isSourceLoaded) {
+      // Do something when the source has finished loading
+
+      const loadDiv = document.querySelector('#load');
+      loadDiv.style.opacity = '0';
+      // This prevents the page from scrolling down to where it was previously.
+      if ('scrollRestoration' in history) {
+         history.scrollRestoration = 'manual';
+      }
+      // This is needed if the user scrolls down during page load and you want to make sure the page is scrolled to the top once it's fully loaded. This has Cross-browser support.
+      window.scrollTo(0, 0);
+      
+      // This removes loading animation elements
+      setTimeout(() => {
+         loadDiv.remove();
+      }, 500);
+   }
 });
