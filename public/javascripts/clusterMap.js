@@ -132,8 +132,8 @@ map.on('load', function () {
    });
 });
 
+let checkLoading = true;
 map.on('sourcedata', function (e) {
-   let checkLoading = true;
    if (e.isSourceLoaded && checkLoading) {
       checkLoading = false;
       // Do something when the source has finished loading

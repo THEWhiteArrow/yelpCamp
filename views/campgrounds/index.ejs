@@ -14,8 +14,8 @@
 <div class="row grid-container">
 <% for (let campground of campgrounds){%>
    <div class="card mb-3">
-      <div class="row">
-         <div class="col-md-12 ">
+      <div class="d-flex flex-column justify-content-start">
+         <div class="col-md-12">
             <% if(campground.images.length){ %>
                <img class="img-fluid mt-2 pt-1" alt="Campground Image" src="<%=campground.images[0].url%>">
                <% }else{ %>
@@ -23,8 +23,7 @@
                      src="https://res.cloudinary.com/dcj6ujzqj/image/upload/e_saturation:-100/v1611163785/YelpCamp/app_files/kilarov-zaneit-Hxs6EAdI2Q8-unsplash_h4n7hs.jpg">
                   <% } %>
          </div>
-         <div class="col-md-12">
-            <div class="card-body d-flex flex-column justify-content-start ">
+            <div class="card-body d-flex flex-column">
                <h5 class="card-title">
                   <%= campground.title %>
                </h5>
@@ -38,7 +37,6 @@
                </p>
                <a class="btn btn-primary min-w-fit-content col-lg-5" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
             </div>
-         </div>
       </div>
    </div>
    <% }%>

@@ -81,6 +81,10 @@ svg{
    height: auto;
 }
 
+.h-fit-content{
+   height: min-content !important;
+}
+
 .min-w-fit-content{
    min-width: fit-content;
 }
