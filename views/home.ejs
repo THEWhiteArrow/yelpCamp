@@ -13,23 +13,23 @@
 
    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-       <header class="mb-auto">
+       <header class="mb-2 mb-md-5">
            <div>
-               <h3 class="float-md-left mb-0">YelpCamp</h3>
-               <nav class="nav nav-masthead justify-content-center float-md-right">
-                   <a class="nav-link active" aria-current="page" href="#">Home</a>
-                   <a class="nav-link" href="/campgrounds">Campgrounds</a>
+               <h3 class="float-md-left mb-2 mb-md-0 ml-3 ml-md-0">YelpCamp</h3>
+               <nav class="d-flex flex-column flex-md-row nav nav-masthead align-items-center justify-content-center float-md-right">
+                   <a class="w-auto px-2 nav-link active" aria-current="page" href="#">Home</a>
+                   <a class="w-auto px-2 nav-link" href="/campgrounds">Campgrounds</a>
                    <% if(!currentUser) { %>
-                   <a class="nav-link" href="/login">Login</a>
-                   <a class="nav-link" href="/register">Register</a>
+                   <a class="w-auto px-2 nav-link" href="/login">Login</a>
+                   <a class="w-auto px-2 nav-link" href="/register">Register</a>
                    <% } else { %>
-                   <a class="nav-link" href="/logout">Logout</a>
+                   <a class="w-auto px-2 nav-link" href="/logout">Logout</a>
                    <% } %>
                </nav>
            </div>
        </header>
 
-       <main class="px-3">
+       <main class="my-auto mb-5 pb-5 pb-md-0 d-flex flex-column align-items-center px-0 px-md-3">
            <h1>YelpCamp</h1>
            <p class="lead"> Welcome to YelpCamp! <br> Jump right in and explore our many campgrounds. <br>
                Feel free to share some of your own and comment on others!</p>
