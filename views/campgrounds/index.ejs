@@ -12,12 +12,12 @@
    <a class="d-flex px-2 my-md-auto mb-4 btn btn-success justify-content-center align-items-center" href="/campgrounds/new">Add Campground</a>
 </div>
 <div class="row grid-container">
-<% for (let campground of campgrounds){%>
+<% for(let i=campgrounds.length-1;i>=0;i--){%>
    <div class="card mb-3">
       <div class="d-flex flex-column justify-content-start">
          <div class="col-md-12">
-            <% if(campground.images.length){ %>
-               <img class="img-fluid mt-2 pt-1" alt="Campground Image" src="<%=campground.images[0].url%>">
+            <% if(campgrounds[i].images.length){ %>
+               <img class="img-fluid mt-2 pt-1" alt="Campground Image" src="<%=campgrounds[i].images[0].url%>">
                <% }else{ %>
                   <img class="img-fluid mt-2 pt-1" alt="No Campground Image Uploaded"
                      src="https://res.cloudinary.com/dcj6ujzqj/image/upload/e_saturation:-100/v1611163785/YelpCamp/app_files/kilarov-zaneit-Hxs6EAdI2Q8-unsplash_h4n7hs.jpg">
@@ -25,17 +25,17 @@
          </div>
             <div class="card-body d-flex flex-column">
                <h5 class="card-title">
-                  <%= campground.title %>
+                  <%= campgrounds[i].title %>
                </h5>
                <p class="card-text">
-                  <%= campground.description %>
+                  <%= campgrounds[i].description %>
                      </p>
                      <p class="card-text">
                         <small class="text-muted">
-                           <%= campground.location%>
+                           <%= campgrounds[i].location%>
                         </small>
                </p>
-               <a class="btn btn-primary min-w-fit-content col-lg-5" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
+               <a class="btn btn-primary min-w-fit-content col-lg-5" href="/campgrounds/<%=campgrounds[i]._id%>">View <%=campgrounds[i].title%></a>
             </div>
       </div>
    </div>
